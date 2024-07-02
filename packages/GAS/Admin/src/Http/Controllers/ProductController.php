@@ -44,7 +44,6 @@ class ProductController extends Controller
             DB::commit();
         } catch (\Throwable $th) {
             Log::error($th);
-            Log::info('error');
             DB::rollBack();
         }
 
